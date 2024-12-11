@@ -268,7 +268,7 @@ app.get('/api/weather/history', async (req, res) => {
 // Start the server
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => {
-  console.log(`Server running on https://weathermonitoring-neon.vercel.app/`);
+  console.log(`Server running on https://weathermonitoring-neon.vercel.app/api/weather`);
 });
 
 // Graceful shutdown
