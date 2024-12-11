@@ -72,7 +72,7 @@ const VerifyEmail = () => {
             Verify Your Email
           </h2>
           <p className="mt-2 text-center text-sm text-gray-600">
-            We've sent a verification link to your email
+            We&apos;ve sent a verification link to your email
           </p>
         </div>
 
@@ -90,7 +90,7 @@ const VerifyEmail = () => {
 
         <div className="mt-6 space-y-4">
           <p className="text-center text-sm text-gray-600">
-            Didn't receive the email? Check your spam folder or click below to resend.
+            Didn&apos;t receive the email? Check your spam folder or click below to resend.
           </p>
           <button
             onClick={handleResendVerification}
