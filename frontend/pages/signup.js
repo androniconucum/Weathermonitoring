@@ -7,7 +7,7 @@ import {
   sendEmailVerification,
   signOut 
 } from 'firebase/auth';
-import { app } from '@/pages/lib/script';
+import { app } from '@/lib/script';
 
       const SignUp = () => {
       const [email, setEmail] = useState('');

@@ -5,7 +5,7 @@ import {
   sendEmailVerification, 
   onAuthStateChanged 
 } from 'firebase/auth';
-import { app } from '@/pages/lib/script';
+import { app } from '@/lib/script';
 
 const VerifyEmail = () => {
   const [error, setError] = useState(null);

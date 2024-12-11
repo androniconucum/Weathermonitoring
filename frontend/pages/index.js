@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
-import { app } from '@/pages/lib/script';
+import { app } from '@/lib/script';
 
 export default function SignIn() {
   const [email, setEmail] = useState('');
