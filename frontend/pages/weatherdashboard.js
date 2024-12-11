@@ -617,7 +617,7 @@ return (
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://weathermonitoring-neon.vercel.app/');
+        const response = await axios.get('https://weathermonitoring-neon.vercel.app/api/weather');
         if (response.data.length > 0) {
           const latestData = response.data[0];
           setData(latestData);
