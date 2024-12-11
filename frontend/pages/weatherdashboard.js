@@ -617,7 +617,11 @@ return (
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/weather');
+        const BACKEND_URL = process.env.NODE_ENV === 'production' 
+  ? 'https://weathermonitoring-fawn.vercel.app/api/weather'
+  : 'http://localhost:3000';
+
+const response = await axios.get(`${BACKEND_URL}/api/weather`);
         if (response.data.length > 0) {
           const latestData = response.data[0];
           setData(latestData);
