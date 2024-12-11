@@ -223,7 +223,7 @@ class WeatherDataManager {
 const weatherDataManager = new WeatherDataManager();
 
 // POST route to accept data from the ESP8266
-app.post('/', async (req, res) => {
+app.post('/api/weather', async (req, res) => {
   try {
     const data = req.body;
     console.log('Received data:', data);
@@ -239,14 +239,14 @@ app.post('/', async (req, res) => {
 });
 
 // GET route to retrieve the latest weather data
-app.get('/', (req, res) => {
+app.get('/api/weather', (req, res) => {
   console.log('GET /api/weather endpoint was hit');
   const latestData = weatherDataManager.getLatestData();
   res.json(latestData);
 });
 
 // New GET route to retrieve historical weather data
-app.get('/', async (req, res) => {
+app.get('/api/weather/history', async (req, res) => {
   try {
     const limit = req.query.limit ? parseInt(req.query.limit) : 50;
     const startTime = req.query.startTime ? parseInt(req.query.startTime) : null;
@@ -268,7 +268,7 @@ app.get('/', async (req, res) => {
 // Start the server
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => {
-  console.log(`Server running on https://weathermonitoring-neon.vercel.app`);
+  console.log(`Server running on http://localhost:${PORT}`);
 });
 
 // Graceful shutdown
